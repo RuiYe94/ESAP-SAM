@@ -1,0 +1,10 @@
+# Target interpreter: Python 3.13.12, Linux x86_64 (not a pip package).
+# Keep the supplied custom/preinstalled Torch CUDA build. No verified public
+# PyTorch 2.10.0 cu129 wheel index is assumed. See README before installing.
+torch==2.10.0+cu129
+triton==3.6.0; sys_platform == "linux" and platform_machine == "x86_64"
+numpy==2.2.6
+Pillow==11.1.0
+tqdm==4.67.1
+# tqdm's Windows-only runtime dependency (target screenshot uses Linux/GCC).
+colorama==0.4.6; sys_platform == "win32"
